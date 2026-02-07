@@ -7,7 +7,7 @@ attendancecsvfile="zenvy_attendance.csv"
 #file for output
 outputcsvfile="zenvy_payroll.csv"
 
-#constants
+#assumed values for calculation
 overtime_rate=350
 tax_rate=0.10
 pf_rate=0.05
@@ -68,5 +68,6 @@ with open(outputcsvfile,"w",newline="") as f:
     writer=csv.DictWriter(f,fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(payroll_list)
+
 
 print("Payroll calculation completed. Output saved to", outputcsvfile)
